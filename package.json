@@ -20,5 +20,15 @@
     "simplelightbox": "^2.14.3",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  }
+  },
+  "description": "Цей проект було створено за допомогою Vite. Для знайомства та налаштування додаткових можливостей [звернись до документації](https://vitejs.dev/).",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alieksa-nastya/goit-js-hm-09.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alieksa-nastya/goit-js-hm-09/issues"
+  },
+  "homepage": "https://github.com/alieksa-nastya/goit-js-hm-09#readme"
 }
