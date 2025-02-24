@@ -9,9 +9,16 @@ const formData = {
 document.addEventListener('DOMContentLoaded', () => {
     const savedData = localStorage.getItem(STORAGE_KEY);
     if (savedData) {
-        formData = JSON.parse(savedData);
-        form.elements.email.value = formData.email || '';
-        form.elements.message.value = formData.message || '';
+        try {
+            const parsedData = JSON.parse(savedData);
+            formData.email = parsedData.email || '';
+            formData.message = parsedData.message || '';
+
+            form.elements.email.value = formData.email || '';
+            form.elements.message.value = formData.message || '';
+        } catch (error) {
+            console.log('Error parsing localStorage data:', error);
+        }
     }
 });
 
@@ -26,7 +33,7 @@ form.addEventListener('submit', event => {
     const { email, message } = formData;
 
     if (!email || !message) {
-        alert('Fill all fields please');
+        alert('Fill please all fields');
         return;
     }
 
